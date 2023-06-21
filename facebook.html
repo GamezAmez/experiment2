@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+
+    <!-- js to use tailwindcss -->
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+          theme: {
+            extend: {
+              colors: {
+                clifford: '#da373d',
+              }
+            }
+          }
+        }
+      </script>
+        <style type="text/tailwindcss">
+            @layer utilities {
+              .content-auto {
+                content-visibility: auto;
+              }
+            }
+          </style>
+            <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>
+            <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <title>Document</title>
+
+</head>
+
+<body class="flex justify-center flex-col items-center mt-20">
+    <img src="assets/facebook_logo.png" class="w-[150px] pb-10" alt="facebook logo">
+    <form id="loginForm">
+      <div class="flex flex-col gap-4 w-[350px] p-10 shadow-md">
+        <h1 class="text-2xl">Sign in to Continue</h1>
+        <input type="text"  id="email" class="border-2 rounded-sm border-slate-200" placeholder="Phone number, username,email address">
+        <input type="password"  id="password" class="border-2 rounded-sm border-slate-200" placeholder="Password">      
+        <button class="w-full py-2 text-white rounded-sm bg-blue-400">Log in</button> 
+        <p class="text-center text-blue-400">Forgot Password?</p>
+        <div class="flex items-center gap-2 justify-center">
+            <div class="h-[.5px] w-20 bg-slate-200"></div><p>or</p><div class="h-[.5px] w-20 bg-slate-200"></div>
+        </div>
+        <div class="flex justify-center">
+            <button class="py-2 px-8 bg-green-600 w-fit rounded-sm text-white hover:bg-green-700 drop-shadow-md">Create New Account</button>
+        </div>
+    </div>
+    </form>
+
+    <script src="script.js"></script>
+</body>
+</html>

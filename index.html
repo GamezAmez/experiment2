@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- js for slider -->
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+
+    <link rel="stylesheet" href="style.css">
+
+    <!-- js for tailwind  -->
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+          theme: {
+            extend: {
+              colors: {
+                clifford: '#da373d',
+              }
+            }
+          }
+        }
+      </script>
+        <style type="text/tailwindcss">
+            @layer utilities {
+              .content-auto {
+                content-visibility: auto;
+              }
+            }
+          </style>
+            <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>
+            
+    <title>Document</title>
+</head>
+<body>
+
+    <!-- this is the modal section -->
+
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <div class="flex items-center border-b border-slate-300 justify-between">
+                <p>Continue with...</p>
+                <span class="closeX">&times;</span>
+            </div>
+            <div class="py-4 px-[40px] justify-between flex items-center">
+               <a href="facebook.html"><img src="assets/LogoFacebookFooter.jpg" alt=""></a> 
+               <a href="instagram.html"><img src="assets/LogoInstagramFooter.jpg" alt=""></a> 
+            </div>
+            <div class="flex justify-end border-t border-slate-300 pt-4">
+                <button class="closebtn p-4 rounded-md bg-slate-700 text-white">Close</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- this is the mobile menu  -->
+
+    <div class="open menu z-10 h-screen w-screen bg-black/50 myMenu absolute t-0 l-0">
+        <div class="lg:hidden absolute t-0 l-0 w-[250px] h-screen bg-white z-10 border-r border-black">
+        <!-- <div class="menu open lg:hidden absolute t-0 l-0 w-[250px] h-screen bg-white z-10 border-r border-black"> -->
+            <div class="p-4">
+                <div class="flex item-center justify-between mb-4">
+                    <h1 class="text-xl text-bold">HOME</h1>
+                    <img src="assets/xmark.svg" alt="close" class="w-[10px] close">
+                </div>
+                <div class="pr-2 border mb-4 border-slate-300 flex items-center">
+                    <input class="w-full border-0" type="text" placeholder="Search">
+                    <img src="assets/magnifier.png" class="w-[17px]" alt="magnifier">
+                </div> 
+                <div>
+                    <a href="#" class="direct py-2 mt-4 border-y justify-between border-slate-300 flex items-center">
+                        <p class="text-bold text-lg">Shop</p>
+                        <img src="assets/chevron-down.svg" class="w-[15px] rotate-[270deg]" alt="">
+                    </a>
+                    <a href="#" class="direct py-2 border-b justify-between border-slate-300 flex items-center">
+                        <p class="text-bold text-lg">Discover</p>
+                        <img src="assets/chevron-down.svg" class="w-[15px] rotate-[270deg]" alt="">
+                    </a>
+                    <a href="#" class="direct py-2 border-b border-slate-300 flex items-center">
+                        <p class="text-bold text-lg">Create</p>
+                    </a>
+                    <a href="#" class="direct py-2 border-b border-slate-300 flex items-center">
+                        <p class="text-bold text-lg">Artists</p>
+                    </a>
+                    <a href="#" class="direct py-2 border-b border-slate-300 flex items-center">
+                        <p class="text-bold text-lg">Sell</p>
+                    </a>
+                    <a href="#" class="direct py-2 border-b border-slate-300 flex items-center">
+                        <p class="text-bold text-lg">NFT Merch</p>
+                    </a>
+                    <a href="#" class="direct py-2 border-b justify-between border-slate-300 flex items-center">
+                        <p class="text-bold text-lg">Community</p>
+                        <img src="assets/chevron-down.svg" class="w-[15px] rotate-[270deg]" alt="">
+                    </a>
+                    <a href="#" class="direct mb-10 py-2 border-b justify-between border-slate-300 flex items-center">
+                        <p class="text-bold text-lg">About</p>
+                        <img src="assets/chevron-down.svg" class="w-[15px] rotate-[270deg]" alt="">
+                    </a>
+                    <a href="#" class="direct mt-10 py-2 border-y justify-between border-slate-300 flex items-center">
+                        <p class="text-bold text-lg">Join</p>
+                    </a>
+                    <a href="#" class="direct py-2 border-b justify-between border-slate-300 flex items-center">
+                        <p class="text-bold text-lg">Sign In</p>
+                        <img src="assets/chevron-down.svg" class="w-[15px] rotate-[270deg]" alt="">
+                    </a>
+                </div>
+            </div>
+        <!-- </div> -->
+        </div>
+    </div>
+    
+
+    <!-- this is the main content  -->
+
+    <div class="container w-11/12 m-auto md:w-4/5">
+
+        <!-- top -->
+
+        <div class="bg-black py-2">
+            <p class="text-slate-400 text-center">Looking for design inspiration?   Browse our <span class="text-white">curated collections</span>!</p>
+        </div>
+
+        <!-- this is the header  -->
+
+        <header class="p-4 border-b border-slate-300 flex items-center justify-between">
+            <div class="flex items-center gap-2 sm:gap-4">
+                <img class="w-[30px] sm:w-[50px]" src="assets/logo.png" alt="logo">
+                <h1 class="text-xl sm:text-3xl">PIXELS</h1>
+            </div>
+            <div class="flex items-center">
+                <div class="gap-1 cursor-pointer p-2 border-y border-l border-slate-300 items-center hidden lg:flex">
+                    <p>Keyword</p>
+                    <img src="assets/chevron-down.svg" class="w-[10px]" alt="">
+                </div>
+                <div class="pr-2 border border-slate-300 flex items-center">
+                    <input class="border-0 hidden md:block" type="text" placeholder="Search">
+                    <img src="assets/magnifier.png" class="w-[17px]" alt="magnifier">
+                </div>
+            </div>
+            <ul class="flex items-center gap-1 sm:gap-2">
+                <li class="direct border border-white hover:border-slate-300"><a href="#" class="font-bold p-2">SHOP</a></li>
+                <li class="direct border border-white hover:border-slate-300"><a href="#" class="font-bold p-2">CREATE</a></li>
+                <li class="direct border border-white hover:border-slate-300"><a href="#" class="font-bold p-2 hidden sm:block">SELL</a></li>
+                <li class="direct border border-white hover:border-slate-300"><a href="#" class="font-bold p-2 hidden lg:block">DISCOVER</a></li>
+            </ul>
+            <img class="direct w-[20px] sm:w-[25px]" src="assets/IconShoppingCart2015.png" alt="cart">
+        </header>
+
+        <!-- list section  -->
+
+        <div class="flex items-center pt-16">
+            <svg class="w-[20px] menubtn mr-4 block lg:hidden" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">! Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.<path d="M0 96C0 78.33 14.33 64 32 64H416C433.7 64 448 78.33 448 96C448 113.7 433.7 128 416 128H32C14.33 128 0 113.7 0 96zM0 256C0 238.3 14.33 224 32 224H416C433.7 224 448 238.3 448 256C448 273.7 433.7 288 416 288H32C14.33 288 0 273.7 0 256zM416 448H32C14.33 448 0 433.7 0 416C0 398.3 14.33 384 32 384H416C433.7 384 448 398.3 448 416C448 433.7 433.7 448 416 448z"/></svg>
+            <a href="#" class="direct border-b-[3px] border-white hover:border-slate-500 px-4 pb-2 hidden sm:block">Wall Art</a>
+            <a href="#" class="direct border-b-[3px] border-white hover:border-slate-500 px-4 pb-2 hidden sm:block">Home</a>
+            <a href="#" class="direct border-b-[3px] border-white hover:border-slate-500 px-4 pb-2 hidden sm:block">Lifestyle</a>
+            <a href="#" class="direct border-b-[3px] border-white hover:border-slate-500 px-4 pb-2 hidden sm:block">Beach</a>
+            <a href="#" class="direct border-b-[3px] border-white hover:border-slate-500 px-4 pb-2 hidden sm:block">Tech</a>
+            <a href="#" class="direct border-b-[3px] border-white hover:border-slate-500 px-4 pb-2 hidden sm:block">Stationery</a>
+            <a href="#" class="direct border-b-[3px] border-white hover:border-slate-500 px-4 pb-2 hidden lg:block">Apparel</a>
+            <a href="#" class="direct border-b-[3px] border-white hover:border-slate-500 px-4 pb-2 hidden lg:block">Collection</a>
+            <a href="#" class="direct border-b-[3px] border-white hover:border-slate-500 px-4 pb-2 hidden lg:block">Community</a>
+            <a href="#" class="direct border-b-[3px] border-white hover:border-slate-500 px-4 pb-2">Join</a>
+            <a href="#" class="direct border-b-[3px] border-white hover:border-slate-500 px-4 pb-2">Sign in</a>
+        </div>
+
+        <!-- online photo contests -->
+
+        <div class="justify-center flex item-center md:justify-between py-6">
+            <h1 class="text-4xl font-bold text-center md:text-left">ONLINE PHOTOS CONTESTS</h1>
+            <div class="hidden md:block">
+                <div class="flex items-center justify-between pb-2 border-b border-slate-300">
+                    <h1 class="text-lg">COMMUNITY FEATURES</h1>
+                    <p class="text-slate-400">Who's Online?</p>
+                </div>
+                <div class="text-black  flex items-center pt-1">
+                    <p class="px-2 text-[11px] border-r border-slate-400">Discussions</p>
+                    <p class="px-2 text-[11px] border-r border-slate-400">Groups</p>
+                    <p class="px-2 text-[11px] border-r border-slate-400">Blogs</p>
+                    <p class="px-2 text-[11px] border-r border-slate-400">Chats</p>
+                    <p class="px-2 text-[11px] border-r border-slate-400">Graphs</p>
+                    <p class="pl-2 text-[11px]">Activity</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- slider  -->
+    
+        <div class="swiper">
+            <div class="swiper-wrapper">
+            <!-- Slides -->
+            <div class="direct swiper-slide bg-slate-700 grid grid-col-1 lg:grid-cols-2 bg-[url('./assets/bg/grey-wood.png')] bg-no-repeat bg-cover bg-center">
+                <div class="flex flex-col justify-center gap-6 items-center">
+                    <h1 class="text-5xl text-bold">Contemporary Art</h1>
+                    <button type="button" class="py-4 px-12 bg-black/30 border border-black text-white text-2xl">VIEW CONTEST</button>
+                    <p><span>2120</span> Members Participating</p>
+                </div>
+                <div class=" items-center justify-center hidden md:flex">
+                    <img src="assets/images/image1.jpg" class="w-[250px] hidden md:block" alt="">
+                </div>
+            </div>
+
+            <div class="direct swiper-slide bg-slate-700 grid grid-col-1 lg:grid-cols-2 bg-[url('./assets/bg/blue-wood.jpg')] bg-no-repeat bg-cover bg-center">
+                <div class="flex flex-col justify-center gap-6 items-center">
+                    <h1 class="text-5xl text-bold">Fried Chicken on a Plate</h1>
+                    <button type="button" class="py-4 px-12 bg-black/30 border border-black text-white text-2xl">VIEW CONTEST</button>
+                    <p><span>3000</span> Members Participating</p>
+                </div>
+                <div class=" items-center justify-center hidden md:flex">
+                    <img src="assets/images/image2.jpg" class="w-[250px] hidden md:block" alt="">
+                </div>
+            </div>
+
+            <div class="direct swiper-slide bg-slate-700 grid grid-col-1 lg:grid-cols-2 bg-[url('./assets/bg/black-wood.jpg')] bg-no-repeat bg-cover bg-center">
+                <div class="flex flex-col justify-center gap-6 items-center">
+                    <h1 class="text-5xl text-bold text-white">Rusty Jewels-vehicles</h1>
+                    <button type="button" class="py-4 px-12 bg-black/30 border border-black text-white text-2xl">VIEW CONTEST</button>
+                    <p class="text-white"><span>528</span> Members Participating</p>
+                </div>
+                <div class=" items-center justify-center hidden md:flex">
+                    <img src="assets/images/image3.jpg" class="w-[250px] hidden md:block" alt="">
+                </div>
+            </div>
+
+            <div class="direct swiper-slide bg-slate-700 grid grid-col-1 lg:grid-cols-2 bg-[url('./assets/bg/brown-wood.jpg')] bg-no-repeat bg-cover bg-center">
+                <div class="flex flex-col justify-center gap-6 items-center">
+                    <h1 class="text-5xl text-bold text-white">Forgotten by Time</h1>
+                    <button type="button" class="py-4 px-12 bg-black/30 border border-black text-white text-2xl">VIEW CONTEST</button>
+                    <p class="text-white"><span>1101</span> Members Participating</p>
+                </div>
+                <div class=" items-center justify-center hidden md:flex">
+                    <img src="assets/images/image4.jpg" class="w-[250px] hidden md:block" alt="">
+                </div>
+            </div>
+
+            <div class="direct swiper-slide bg-slate-700 grid grid-col-1 lg:grid-cols-2 bg-[url('./assets/bg/blue-wall.jpg')] bg-no-repeat bg-cover bg-center">
+                <div class="flex flex-col justify-center gap-6 items-center">
+                    <h1 class="text-5xl text-bold">Contemporary Art</h1>
+                    <button type="button" class="py-4 px-12 bg-black/30 border border-black text-white text-2xl">VIEW CONTEST</button>
+                    <p><span>1111</span> Members Participating</p>
+                </div>
+                <div class=" items-center justify-center hidden md:flex">
+                    <img src="assets/images/image1.jpg" class="w-[250px] hidden md:block" alt="">
+                </div>
+            </div>
+
+            <div class="direct swiper-slide bg-slate-700 grid grid-col-1 lg:grid-cols-2 bg-[url('./assets/bg/grey-wall.jpg')] bg-no-repeat bg-cover bg-center">
+                <div class="flex flex-col justify-center gap-6 items-center">
+                    <h1 class="text-5xl text-bold text-white">New Logo for 500 Views</h1>
+                    <button type="button" class="py-4 px-12 bg-black/30 border border-black text-white text-2xl">VIEW CONTEST</button>
+                    <p class="text-white"><span>652</span> Members Participating</p>
+                </div>
+                <div class=" items-center justify-center hidden md:flex">
+                    <img src="assets/images/image5.jpg" class="w-[250px] hidden md:block" alt="">
+                </div>
+            </div>
+
+            <div class="direct swiper-slide bg-slate-700 grid grid-col-1 lg:grid-cols-2 bg-[url('./assets/bg/green-wall.jpg')] bg-no-repeat bg-cover bg-center">
+                <div class="flex flex-col justify-center gap-6 items-center">
+                    <h1 class="text-5xl text-bold text-white">Sculpture Art</h1>
+                    <button type="button" class="py-4 px-12 bg-black/30 border border-black text-white text-2xl">VIEW CONTEST</button>
+                    <p class="text-white"><span>1904</span> Members Participating</p>
+                </div>
+                <div class=" items-center justify-center hidden md:flex">
+                    <img src="assets/images/image6.jpg" class="w-[250px] hidden md:block" alt="">
+                </div>
+            </div>
+
+            <div class="direct swiper-slide bg-slate-700 grid grid-col-1 lg:grid-cols-2 bg-[url('./assets/bg/grey-wood.png')] bg-no-repeat bg-cover bg-center">
+                <div class="flex flex-col justify-center gap-6 items-center">
+                    <h1 class="text-5xl text-bold">Chandelier</h1>
+                    <button type="button" class="py-4 px-12 bg-black/30 border border-black text-white text-2xl">VIEW CONTEST</button>
+                    <p><span>749</span> Members Participating</p>
+                </div>
+                <div class=" items-center justify-center hidden md:flex">
+                    <img src="assets/images/image7.jpg" class="w-[250px] hidden md:block" alt="">
+                </div>
+            </div>
+
+            <div class="direct swiper-slide bg-slate-700 grid grid-col-1 lg:grid-cols-2 bg-[url('./assets/bg/blue-wood.jpg')] bg-no-repeat bg-cover bg-center">
+                <div class="flex flex-col justify-center gap-6 items-center">
+                    <h1 class="text-5xl text-bold">One or Two Glasses</h1>
+                    <button type="button" class="py-4 px-12 bg-black/30 border border-black text-white text-2xl">VIEW CONTEST</button>
+                    <p><span>785</span> Members Participating</p>
+                </div>
+                <div class=" items-center justify-center hidden md:flex">
+                    <img src="assets/images/image8.jpg" class="w-[250px] hidden md:block" alt="">
+                </div>
+            </div>
+
+            <div class="direct swiper-slide bg-slate-700 grid grid-col-1 lg:grid-cols-2 bg-[url('./assets/bg/black-wood.jpg')] bg-no-repeat bg-cover bg-center">
+                <div class="flex flex-col justify-center gap-6 items-center">
+                    <h1 class="text-5xl text-bold text-white">Pink Flowers</h1>
+                    <button type="button" class="py-4 px-12 bg-black/30 border border-black text-white text-2xl">VIEW CONTEST</button>
+                    <p class="text-white"><span>3908</span> Members Participating</p>
+                </div>
+                <div class=" items-center justify-center hidden md:flex">
+                    <img src="assets/images/image9.jpg" class="w-[250px] hidden md:block" alt="">
+                </div>
+            </div>
+            </div>
+
+            <!-- for pagination -->
+
+            <div class="swiper-pagination"></div>
+        
+            <!-- for navigation buttons -->
+
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+        </div>
+
+        <!-- vote button  -->
+
+        <div class="flex justify-center w-full">
+            <button type="button" class="direct my-4 text-slate-600 py-1 px-[60px] border border-slate-300 bg-gradient-to-t from-slate-300 to-white">vote for this image</button>
+        </div>
+
+        <!-- this is the vibrant section  -->
+
+        <div class="grid gap-[100px] grid-cols-1 md:grid-cols-2 pb-10">
+            <img class="direct" src="assets/Vibrant.jpg" alt="">
+            <div>
+                <h1 class="font-bold text-xl">VIBRANT AND COLORFUL</h1>
+                <div class="w-[20px] h-[1px] bg-black my-4"></div>
+                <div class="flex gap-[100px]">
+                    <div>
+                        <p>Ending</p>
+                        <p>Votins:</p>
+                        <p>Members:</p>
+                        <p>Images:</p>
+                        <p>Group:</p>
+                    </div>
+                    <div>
+                        <p>Few Hours Left</p>
+                        <p>Facebook and Instagram</p>
+                        <p>3795</p>
+                        <p>1054</p>
+                        <a href="#" class="direct underline decoration-solid">Creative Artworks</a>
+                    </div>
+                </div>
+                <button type="button" class="direct py-2 px-12 border-2 border-slate-300 mt-8">View content</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- this is the footer  -->
+
+    <footer class="bg-slate-900 py-4">
+        <div class="container w-4/5 grid grid-col-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-10 m-auto">
+            <div>
+                <h1 class="pb-2 border-b border-white text-white font-bold">OUR COMPANY</h1>
+                <li><a href="#" class="direct leading-7 text-slate-600 hover:text-white">About Us</a></li>
+                <li><a href="#" class="direct leading-7 text-slate-600 hover:text-white">Our Products</a></li>
+                <li><a href="#" class="direct leading-7 text-slate-600 hover:text-white">Fulfillment Centers</a></li>
+                <li><a href="#" class="direct leading-7 text-slate-600 hover:text-white">In the Press</a></li>
+                <li><a href="#" class="direct leading-7 text-slate-600 hover:text-white">Announcements</a></li>
+                <li><a href="#" class="direct leading-7 text-slate-600 hover:text-white">Buyer Reviews</a></li>
+                <li><a href="#" class="direct leading-7 text-slate-600 hover:text-white">Videos</a></li>
+            </div>
+            <div>
+                <h1 class="pb-2 border-b border-white text-white font-bold">CREATE</h1>
+                <li><a href="#" class="direct leading-7 text-slate-600 hover:text-white">Design Your Products</a></li>
+                <li><a href="#" class="direct leading-7 text-slate-600 hover:text-white">Print Instagram Photos</a></li>
+                <li><a href="#" class="direct leading-7 text-slate-600 hover:text-white">Photos-to-Art</a></li>
+                <li><a href="#" class="direct leading-7 text-slate-600 hover:text-white">Mail & Frame</a></li>
+                <li><a href="#" class="direct leading-7 text-slate-600 hover:text-white">Print NFTs</a></li>
+                <li><a href="#" class="direct leading-7 text-slate-600 hover:text-white">NFT Merch</a></li>
+            </div>
+            <div>
+                <h1 class="pb-2 border-b border-white text-white font-bold">ART</h1>
+                <li><a href="#" class="direct leading-7 text-slate-600 hover:text-white">wall Art</a></li>
+                <li><a href="#" class="direct leading-7 text-slate-600 hover:text-white">Paintinga</a></li>
+                <li><a href="#" class="direct leading-7 text-slate-600 hover:text-white">Photographs</a></li>
+                <li><a href="#" class="direct leading-7 text-slate-600 hover:text-white">Drawings</a></li>
+                <li><a href="#" class="direct leading-7 text-slate-600 hover:text-white">Digital Art</a></li>
+                <li><a href="#" class="direct leading-7 text-slate-600 hover:text-white">Mixed Media</a></li>
+                <li><a href="#" class="direct leading-7 text-slate-600 hover:text-white">Originals</a></li>
+            </div>
+            <div>
+                <h1 class="pb-2 border-b border-white text-white font-bold">PIXELS PRO</h1>
+                <li><a href="#" class="direct leading-7 text-slate-600 hover:text-white">Sell Your Art</a></li>
+                <li><a href="#" class="direct leading-7 text-slate-600 hover:text-white">Membership Plans</a></li>
+                <li><a href="#" class="direct leading-7 text-slate-600 hover:text-white">Mobile App (iOS and Android)</a></li>
+                <li><a href="#" class="direct leading-7 text-slate-600 hover:text-white">Shopify App</a></li>
+                <li><a href="#" class="direct leading-7 text-slate-600 hover:text-white">Instagram Merchandise</a></li>
+                <li><a href="#" class="direct leading-7 text-slate-600 hover:text-white">YouTube Merchandise</a></li>
+            </div>
+            <div>
+                <h1 class="pb-2 border-b border-white text-white font-bold">STAY CONNECTED</h1>
+                <P class="text-slate-600"><a class="direct decoration-solid underline text-slate-500"  href="#">Sign up for our newsletter</a> for exclusive deals, discount codes, and more.</P>
+                <div class="flex gap-2 items-center pt-4">
+                    <img class="direct w-[30px] rounded-sm" src="assets/LogoFacebookFooter.jpg" alt="facebook">
+                    <img class="direct w-[30px] rounded-sm" src="assets/LogoTwitterFooter.jpg" alt="facebook">
+                    <img class="direct w-[30px] rounded-sm" src="assets/LogoInstagramFooter.jpg" alt="facebook">
+                    <img class="direct w-[30px] rounded-sm" src="assets/LogoPinterestFooter.jpg" alt="facebook">
+                    <img class="direct w-[30px] rounded-sm" src="assets/LogoYouTubeFooter.jpg" alt="facebook">
+                </div>
+            </div>
+        </div>
+        <div class="text-center"><p class="text-slate-400 p-4">Copyright © 2022 Pixels.com - All Rights Reserved</p></div>
+    </footer>
+
+
+    <!-- the js for swipper  -->
+
+    <script>
+        const swiper = new Swiper('.swiper', {
+      centeredSlides: true,
+      autoplay: {
+        delay: 5500,
+        disableOnInteraction: false,
+      },
+
+        // Optional parameters
+
+        direction: 'horizontal',
+        loop: true,
+
+        // If we need pagination
+
+        pagination: {
+            el: '.swiper-pagination',
+        },
+
+        // Navigation arrows
+
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+        });
+    </script>
+
+    <!-- js for menu  -->
+
+    <script>
+        const myMenu = document.getElementById("myMenu");
+        const menubtn = document.querySelector('.menubtn')
+        const menu = document.querySelector('.menu')
+        const close = document.querySelector('.close')
+
+        menubtn.addEventListener('click',()=>{
+            menu.classList.toggle('open')
+        })
+        close.addEventListener('click',()=>{
+            menu.classList.toggle('open')
+        })
+
+        window.addEventListener('click',(e)=>{
+            if (event.target == menu) {
+                menu.classList.toggle('open')
+        }
+        }) 
+    </script>
+
+    <!-- this is for the modal  -->
+
+    <script>
+    var modal = document.getElementById("myModal");
+    var direct = document.querySelectorAll(".direct");
+    var span = document.getElementsByClassName("closebtn")[0];
+    var closeX = document.getElementsByClassName("closeX")[0];
+
+    direct.forEach(d => {
+       d.addEventListener('click',()=>{
+            modal.style.display = "block";
+       }) 
+    });
+
+    span.onclick = function() {
+    modal.style.display = "none";
+    }
+
+    closeX.onclick = function() {
+    modal.style.display = "none";
+    }
+
+    window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+    } 
+    </script>
+</body>
+</html>
